@@ -67,13 +67,6 @@
 @media screen and (min-width: 768px) {
     .desktop{ display: initial; }
     .mobile{ display: none; }
-
-    #coluna-principal{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-    }
 }
 
 .grid{
@@ -98,6 +91,10 @@ body{
     margin-inline: auto;
 }
 
+#coluna-principal{
+    gap: 2.5rem;
+}
+
 main > header{
     margin-bottom: 2.875rem;
 }
@@ -116,13 +113,10 @@ h1{
     margin-top: .75rem;
 }
 
-@media screen and (min-width: 768px) {
-    h1{
-        margin-bottom: 2.625rem;
-    }
-}
+
 .about{
     & article:not(:last-child){margin-bottom: 2.25rem;}
+    & svg path{stroke: var(--content-brand)}
     & h6{color: var(--content-brand);}
     & p {color: var(--content-secondary);}
 }
@@ -131,79 +125,103 @@ h1{
 
 
 #react-area{
-    gap: 2.5rem;
-    flex-direction: column;
-
     & h3{text-transform: uppercase;}
     & p.p-lg{color: var(--content-secondary);}
 
-    & .numbers-controls .input-box{
-        min-width: 5.75rem;
-        width: min-content;
-        gap: .75rem;
-        text-align: center;
+    & form{
+        gap: 2.5rem;
+        flex-direction: column;
 
-        & .label-md{
-            color: var(--content-secondary);
-            text-transform: uppercase;
-            margin-bottom: .75rem;
-        }
-        & input{
-            width: 100%;
+        & .numbers-controls .input-box{
+            min-width: 5.75rem;
+            width: min-content;
+            gap: .75rem;
             text-align: center;
-            color: var(--content-primary);
-            background-color: var(--background-primary);
-            outline: 0;
-            border: 0;
-            padding-block: .5rem;
-        }
-    }
 
-    .input-box.checkbox{
-        margin-top: 1.25rem;
-
-        & input{display: none;}
-
-        .interruptor{
-            padding: 3px;
-            width: 30px;
-            background-color: var(--content-tertiary);
-            border-radius: 99px;
-
-            & .ball{
-                transition: 0.3s;
-                background-color: white;
-                border-radius: inherit;
-                width: 14px;
-                height: 14px;
+            & .label-md{
+                color: var(--content-secondary);
+                text-transform: uppercase;
+                margin-bottom: .75rem;
             }
-        }
-        & input:checked + label .interruptor{
-            background: var(--gradient-background);
-
-            & .ball{
-                transform: translateX(10px);
+            & input{
+                width: 100%;
+                text-align: center;
+                color: var(--content-primary);
+                background-color: var(--background-primary);
+                outline: 0;
+                border: 0;
+                padding-block: .5rem;
             }
         }
 
-        & label{
-            gap: .5rem;
-            font: 400 .75rem/1.5 var(--font-roboto-flex);
+        .input-box.checkbox{
+            margin-top: 1.25rem;
+
+            & input{display: none;}
+
+            .interruptor{
+                padding: 3px;
+                width: 30px;
+                background-color: var(--content-tertiary);
+                border-radius: 99px;
+
+                & .ball{
+                    transition: 0.3s;
+                    background-color: white;
+                    border-radius: inherit;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+            & input:checked + label .interruptor{
+                background: var(--gradient-background);
+
+                & .ball{
+                    transform: translateX(10px);
+                }
+            }
+
+            & label{
+                gap: .5rem;
+                font: 400 .75rem/1.5 var(--font-roboto-flex);
+                align-items: center;
+            }
+        }
+
+        & button{
+            justify-content: center;
             align-items: center;
+            color: var(--content-primary);
+            text-transform: uppercase;
+            font-weight: 600;
+            background-color: var(--background-tertiary);
+            width: 100%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 0;
+            outline: 0;
         }
     }
+}
 
-    & button{
-        justify-content: center;
-        align-items: center;
-        color: var(--content-primary);
-        text-transform: uppercase;
-        font-weight: 600;
-        background-color: var(--background-tertiary);
-        width: 100%;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        border: 0;
-        outline: 0;
+.about.mobile{
+    margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    body{
+        padding-block: 7.45rem;
     }
+    h1{
+        margin-bottom: 2.625rem;
+    }
+
+    #coluna-principal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    #logo{margin: initial;}
 }
