@@ -32,16 +32,16 @@
     --font-sora-lg: "Sora", sans-serif 4,5rem/1.3 800;
 }
 
-.display-large{
+.display-lg{
     font: 800 4.5rem/1.3 "Sora", sans-serif;
     text-transform: uppercase;
 }
 
-.display-medium{
+.display-md{
     font: 800 2.5rem/1.3 "Sora", sans-serif;
     text-transform: uppercase;
 }
-.display-small{
+.display-sm{
     font: 800 2.5rem/1.3 "Sora", sans-serif;
     text-transform: uppercase;
 }
