@@ -91,6 +91,23 @@ body{
     margin-inline: auto;
 }
 
+.border-gradient{
+    padding: 1px;
+    border-radius: 0.5rem;
+
+    &:hover,
+    &:has(:focus){
+        background: var(--gradient-border);
+    }
+
+    &:has(input:focus){
+        background: var(--gradient-border);
+        padding: 2px;
+        margin: -1px 0;
+    }
+}
+
+
 #coluna-principal{
     gap: 2.5rem;
 }
@@ -132,6 +149,13 @@ h1{
         gap: 2.5rem;
         flex-direction: column;
 
+        & .input-box:has(.border-gradient input:hover),
+        & .input-box:has(.border-gradient input:focus){
+            & label{
+                color: var(--content-brand);
+            }
+        }
+
         & .numbers-controls .input-box{
             min-width: 5.75rem;
             width: min-content;
@@ -150,14 +174,23 @@ h1{
                 background-color: var(--background-primary);
                 outline: 0;
                 border: 0;
-                padding-block: .5rem;
+                border-radius: 0.5rem;
+                padding-block: 0.5rem;
+
+                &:hover,
+                &:focus{
+                    background-color: var(--background-tertiary);
+                }
             }
         }
 
         .input-box.checkbox{
             margin-top: 1.25rem;
 
-            & input{display: none;}
+            & input{
+                width: 0;
+                opacity: 0;
+            }
 
             .interruptor{
                 padding: 3px;
@@ -189,6 +222,7 @@ h1{
         }
 
         & button{
+            transition: 0.3s;
             justify-content: center;
             align-items: center;
             color: var(--content-primary);
@@ -200,6 +234,11 @@ h1{
             border-radius: 0.5rem;
             border: 0;
             outline: 0;
+
+            &:hover,
+            &:focus{
+                background-color: var(--background-primary);
+            }
         }
     }
 }

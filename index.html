@@ -50,17 +50,34 @@
 
                     <section id="controls">
                         <div class="flex numbers-controls">
-                            <div class="input-box"><label for="random-numbers" class="label-md">Números</label><input type="text" id="random-numbers" class="display-sm" value="2"></div>
-                            <div class="input-box"><label for="number-initial-range" class="label-md">De</label><input type="text" id="number-initial-range" class="display-sm" value="1"></div>
-                            <div class="input-box"><label for="number-final-range" class="label-md">Até</label><input type="text" id="number-final-range" class="display-sm" value="100"></div>
+                            <div class="input-box">
+                                <label for="random-numbers" class="label-md">Números</label>
+                                <div class="border-gradient">
+                                    <input type="text" id="random-numbers" class="display-sm" value="2">
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <label for="number-initial-range" class="label-md">De</label>
+                                <div class="border-gradient">
+                                    <input type="text" id="number-initial-range" class="display-sm" value="1">
+                                </div>
+                            </div>
+                            <div class="input-box">
+                                <label for="number-final-range" class="label-md">Até</label>
+                                <div class="border-gradient">
+                                    <input type="text" id="number-final-range" class="display-sm" value="100">
+                                </div>
+                            </div>
                         </div>
                         <div class="input-box checkbox flex">
-                            <input type="checkbox" name="checkbox-reapeat" id="checkbox-reapeat">
+                            <input type="checkbox" name="checkbox-reapeat" id="checkbox-reapeat" checked>
                             <label for="checkbox-reapeat" class="flex"><div class="interruptor"><div class="ball"></div></div> Não repetir número</label>
                         </div>
                     </section>
 
-                    <button class="flex label-md">Sortear <img src="./assets/arrow.svg" alt="seta"></button>
+                    <div class="border-gradient" style="width: 100%;">
+                        <button class="flex label-md">Sortear <img src="./assets/arrow.svg" alt="seta"></button>
+                    </div>
                 </form>
             </section>
 
