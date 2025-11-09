@@ -42,7 +42,7 @@
             </section>
 
             <section id="react-area">
-                <form class="flex">
+                <form class="flex display-none">
                     <header>
                         <h3 class="label-lg">Quero sortear:</h3>
                         <p class="p-lg">Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
@@ -79,6 +79,22 @@
                         <button class="flex label-md">Sortear <img src="./assets/arrow.svg" alt="seta"></button>
                     </div>
                 </form>
+
+                <article id="resultado" class="flex">
+                    <header>
+                        <h3 class="label-lg">Resultado do sorteio</h3>
+                        <h4 class="overline"><span id="lottery-number">1</span>º Resultado</h4>
+                    </header>
+
+                    <div class="list-results">
+                        <span class="result overline">23</span>
+                        <span class="result overline">12</span>
+                    </div>
+
+                    <div class="border-gradient" style="width: 100%;">
+                        <button class="flex label-md">Sortear novamente <img src="./assets/reload.svg" alt="Recarregar"></button>
+                    </div>
+                </article>
             </section>
 
             <section class="about mobile">
