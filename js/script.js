@@ -19,15 +19,22 @@ form.onsubmit = (e) => {
     const qntNumbers = parseInt(document.getElementById("qnt-numbers").value);
     const minNumbers = parseInt(document.getElementById("min-numbers").value);
     const maxNumbers = parseInt(document.getElementById("max-numbers").value);
-    const repeatNumbers = document.getElementById("checkbox-reapeat").checked;
+    const dontRepeatNumbers = document.getElementById("checkbox-reapeat").checked;
 
     for(let rep = 0; rep < qntNumbers; rep++){
         let newNumber = sortearNumbero(minNumbers, maxNumbers);
         
+        if(dontRepeatNumbers == true){
+            if(listResult.includes(newNumber) == true){
+                rep--;
+                continue;
+            }
+        }
+        
         listResult.push(newNumber);
     }
 
-    console.log(listResult, repeatNumbers);
+    console.log(listResult, dontRepeatNumbers);
     
 };
 
