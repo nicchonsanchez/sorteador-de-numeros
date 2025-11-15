@@ -42,7 +42,7 @@
             </section>
 
             <section id="react-area">
-                <form class="flex display-none">
+                <form class="flex">
                     <header>
                         <h3 class="label-lg">Quero sortear:</h3>
                         <p class="p-lg">Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
@@ -51,21 +51,21 @@
                     <section id="controls">
                         <div class="flex numbers-controls">
                             <div class="input-box">
-                                <label for="random-numbers" class="label-md">Números</label>
+                                <label for="qnt-numbers" class="label-md">Números</label>
                                 <div class="border-gradient">
-                                    <input type="text" id="random-numbers" class="display-sm" value="2">
+                                    <input regex-number type="text" id="qnt-numbers" class="display-sm" value="2">
                                 </div>
                             </div>
                             <div class="input-box">
-                                <label for="number-initial-range" class="label-md">De</label>
+                                <label for="min-numbers" class="label-md">De</label>
                                 <div class="border-gradient">
-                                    <input type="text" id="number-initial-range" class="display-sm" value="1">
+                                    <input regex-number type="text" id="min-numbers" class="display-sm" value="1">
                                 </div>
                             </div>
                             <div class="input-box">
-                                <label for="number-final-range" class="label-md">Até</label>
+                                <label for="max-numbers" class="label-md">Até</label>
                                 <div class="border-gradient">
-                                    <input type="text" id="number-final-range" class="display-sm" value="100">
+                                    <input regex-number type="text" id="max-numbers" class="display-sm" value="100">
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                     </div>
                 </form>
 
-                <article id="resultado" class="flex">
+                <article id="resultado" class="flex display-none">
                     <header>
                         <h3 class="label-lg">Resultado do sorteio</h3>
                         <h4 class="overline"><span id="lottery-number">1</span>º Resultado</h4>
