@@ -60,7 +60,6 @@ form.onsubmit = (e) => {
 
 function sortearNumbero(min, max){
     let newNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    console.log(newNumber)
     return newNumber;
 }
 
