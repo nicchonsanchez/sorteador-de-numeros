@@ -27,6 +27,11 @@ form.onsubmit = (e) => {
     const maxNumbers = parseInt(document.getElementById("max-numbers").value);
     const dontRepeatNumbers = document.getElementById("checkbox-reapeat").checked;
 
+    if((maxNumbers - minNumbers + 1) < qntNumbers && dontRepeatNumbers == true){
+        document.getElementById("checkbox-reapeat").checked = false;
+        return;
+    }
+
     for(let rep = 0; rep < qntNumbers; rep++){
         let newNumber = sortearNumbero(minNumbers, maxNumbers);
         
@@ -54,7 +59,9 @@ form.onsubmit = (e) => {
 };
 
 function sortearNumbero(min, max){
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    let newNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log(newNumber)
+    return newNumber;
 }
 
 function sortearNovamente(){
