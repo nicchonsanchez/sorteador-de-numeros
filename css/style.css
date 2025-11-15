@@ -258,6 +258,10 @@ h1{
             text-align: center;
         }
 
+        .list-results{
+            flex-wrap: wrap;
+        }
+
         span.result{
             color: var(--content-brand);
             font-size: 3rem;
